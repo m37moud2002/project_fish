@@ -1,0 +1,435 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.man {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, #5e3954, #0b0414);
+}
+
+.man header {
+    position: fixed;
+    top: -100;
+    right: 0;
+    left: 0;
+    animation: header 0.7s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes header {
+    100% {
+        top: 0;
+    }
+}
+
+.man header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+}
+
+.man header nav .logo {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.man header nav .nav-links a {
+    color: #fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+}
+
+.man .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.man .content .spn {
+    position: relative;
+    font-weight: 900;
+    font-size: 250px;
+    text-transform: uppercase;
+    z-index: 100;
+    background: linear-gradient(to bottom, #fff, #ca69d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: cuses 1.5s ease-out forwards;
+}
+
+@keyframes cuses {
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+.man .content .spn:nth-child(2) {
+    top: 200px;
+    z-index: 1;
+}
+
+.man .content .spn:nth-child(3) {
+    top: -200px;
+
+}
+
+.man .content .spn:nth-child(4) {
+    left: 200px;
+    z-index: 1;
+}
+
+.man .content .spn:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: -40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #15a4cf;
+    animation: sercil-blu 2s infinite ease-in-out alternate;
+}
+
+@keyframes sercil-blu {
+    0% {
+        top: 70px;
+        left: -40px;
+    }
+
+    100% {
+        top: 40px;
+        left: 10px;
+    }
+}
+
+.man .content .spn:nth-child(4) {
+    z-index: 1;
+}
+
+.man .content .fish {
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 750px;
+    animation: fish 1.5s ease forwards;
+}
+
+@keyframes fish {
+    100% {
+        left: 10%;
+    }
+
+}
+
+.scil {
+    position: absolute;
+    bottom: 90px;
+    right: -60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: scil 1.5s ease-out forwards;
+    animation-delay: 1s;
+    transform: scale(0.5);
+}
+
+@keyframes scil {
+    100% {
+        right: 5%;
+        transform: scale(1);
+    }
+}
+
+.scil a {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 10px;
+    background-color: #99999962;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 43px;
+    transition: 0.1s;
+}
+
+.scil a:hover {
+    color: #ca69d4;
+    background-color: #fff;
+}
+
+.about-fish {
+    position: absolute;
+    bottom: 50px;
+    left: -35%;
+    width: 400px;
+    animation: abut-fish 1.5s ease forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes abut-fish {
+    100% {
+        left: 5%;
+    }
+}
+
+.about-fish h3 {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.man .content::before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    border: 40px solid #ef2c4e;
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    border-radius: 50%;
+    animation: sercil-red 2s infinite ease-in-out alternate;
+}
+
+@keyframes sercil-red {
+    0% {
+        bottom: 0;
+        left: -50px;
+    }
+
+    50% {
+        left: -50px;
+    }
+
+    0% {
+        bottom: 40;
+        left: -20px;
+    }
+}
+
+.man .content::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    border: 30px solid #ef39ce;
+    position: absolute;
+    top: -50px;
+    right: -140px;
+    border-radius: 50%;
+    animation: sercil-gre 2s infinite ease-in-out alternate;
+}
+
+@keyframes sercil-gre {
+    0% {
+        top: -30;
+        right: -80px;
+    }
+
+    70% {
+        right: -20px;
+        transform: scale(0.8);
+    }
+
+    100% {
+        top: 50;
+        right: -10px;
+    }
+
+}
+
+.man .about-fish h3 span {
+    padding: 4px 20px 4px 0;
+    border-color: #000;
+}
+
+.man .about-fish p {
+    color: #fff;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.bubbles {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: -80px;
+}
+
+.bubbles .bubble {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    animation: emam 4s ease-in infinite;
+}
+
+@keyframes emam {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+        left: 20px;
+    }
+
+    25% {
+        left: 0px;
+    }
+
+    50% {
+        opacity: 1;
+        left: 20px;
+    }
+
+    75% {
+        opacity: 1;
+        left: 0px;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+        left: 30px;
+    }
+}
+
+.bubbles .bubble:nth-child(1) {
+    animation-delay: 0.5s;
+    width: 15px;
+    height: 15px;
+}
+
+.bubbles .bubble:nth-child(2) {
+    animation-delay: 0.3s;
+    width: 9px;
+    height: 9px;
+}
+
+.bubbles .bubble:nth-child(3) {
+    animation-delay: 0.4s;
+    width: 12px;
+    height: 12px;
+}
+
+.bubbles .bubble:nth-child(4) {
+    animation-delay: 4.5s;
+    width: 14px;
+    height: 14px;
+}
+
+.bubbles .bubble:nth-child(5) {
+    animation-delay: 1.7s;
+    width: 7px;
+    height: 7px;
+}
+
+.bubbles .bubble:nth-child(6) {
+    animation-delay: 2.5s;
+    width: 15px;
+    height: 15px;
+}
+
+.bubbles .bubble:nth-child(7) {
+    animation-delay: 0.5s;
+    width: 11px;
+    height: 11px;
+}
+
+.bubbles .bubble:nth-child(8) {
+    animation-delay: 1.2s;
+    width: 13px;
+    height: 13px;
+}
+
+.bubbles .bubble:nth-child(9) {
+    animation-delay: 1.5s;
+    width: 14px;
+    height: 14px;
+}
+
+.bubbles .bubble:nth-child(10) {
+    animation-delay: 7s;
+    width: 17px;
+    height: 17px;
+}
+
+.bubbles .bubble:nth-child(11) {
+    animation-delay: 0.8s;
+    width: 9px;
+    height: 9px;
+}
+
+.bubbles .bubble:nth-child(12) {
+    animation-delay: 3.8s;
+    width: 12px;
+    height: 12px;
+}
+
+.bubbles .bubble:nth-child(13) {
+    animation-delay: 2s;
+    width: 7px;
+    height: 7px;
+}
+
+.bubbles .bubble:nth-child(14) {
+    animation-delay: 0.5s;
+    width: 9px;
+    height: 9px;
+}
+
+.bubbles .bubble:nth-child(15) {
+    animation-delay: 2.5s;
+    width: 15px;
+    height: 15px;
+}
+
+.bubbles .bubble:nth-child(16) {
+    animation-delay: 4s;
+    width: 13px;
+    height: 13px;
+}
+
+.bubbles .bubble:nth-child(17) {
+    animation-delay: 2s;
+    width: 9px;
+    height: 9px;
+}
+
+.bubbles .bubble:nth-child(18) {
+    animation-delay: 5.5s;
+    width: 14px;
+    height: 14px;
+}
+
+.bubbles .bubble:nth-child(19) {
+    animation-delay: 4.5s;
+    width: 14px;
+    height: 14px;
+}
+
+.bubbles .bubble:nth-child(20) {
+    animation-delay: 2.5s;
+    width: 7px;
+    height: 7px;
+}
